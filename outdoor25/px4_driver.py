@@ -27,7 +27,7 @@ class PX4Driver(Node):
 
         # Parameters
         self.declare_parameter("takeoff_height", 1.0)
-        self.declare_parameter("do_height_control", True)
+        self.declare_parameter("do_height_control", False)
 
         self.takeoff_height = self.get_parameter("takeoff_height").get_parameter_value().double_value #altura objetivo para el despegue
         self.do_height_control = self.get_parameter("do_height_control").get_parameter_value().bool_value #controla la altura objetivo para el despegue
