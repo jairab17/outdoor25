@@ -18,7 +18,7 @@ class PygameMoveDrone(Node):
         self.height_pub = self.create_publisher(Bool, '/px4_driver/do_height_control', 10)
 
         # Parameters
-        self.declare_parameter('scale_linear', 2.0)
+        self.declare_parameter('scale_linear', 7.0)
         self.declare_parameter('scale_angular', 2.0)
         self.declare_parameter('do_height_control', False)
 
@@ -81,9 +81,9 @@ class PygameMoveDrone(Node):
 
             # --- Angular Z (yaw) ---
             if keys[pygame.K_q]:
-                twist.angular.z = angular_speed
-            elif keys[pygame.K_e]:
                 twist.angular.z = -angular_speed
+            elif keys[pygame.K_e]:
+                twist.angular.z = angular_speed
 
             self.twist = twist
             time.sleep(0.05)

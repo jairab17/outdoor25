@@ -25,7 +25,8 @@ setup(
             "px4_driver = outdoor25.px4_driver:main",
             "move_drone = outdoor25.move_drone:main",
             "coord_goto = outdoor25.coord_goto:main",
-            "take_photos_gps = outdoor25.take_photos_gps:main"
+            "take_photos_gps = outdoor25.take_photos_gps:main",
+            "outdoor_detect = outdoor25.outdoor_detect:main"
         ],
     },
 )
